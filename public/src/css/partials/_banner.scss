@@ -1,0 +1,128 @@
+@include component(hero-banner) {
+	position: relative;
+	background-color: $theme-secondary;
+	margin-bottom: 30px;
+
+	@include component(banner-tag) {
+		position: absolute;
+		bottom: -23px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	@include option(inner-banner) {
+		@include size(100%, 380px);
+		background-size: cover;
+		background-position: center;
+		position: relative;
+
+		@include component(inner-content) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		    padding: 10px 20px 30px;
+		    background-color: rgba(0,0,0,0.6);
+		    color: white;
+		}
+	}
+
+	@include component(item-banner) {
+		@include transform(skew(-10deg));
+	    overflow: hidden;
+	    display: inline-block;
+	    //@include size(280px, 460px);
+		@include size(240px, 362px);
+	    position: relative;
+	    margin: 0 3px;
+	    float: left;
+
+	    @media (max-width: 1200px){
+	    	@include size(220px, 362px);
+	    }
+
+	    @media (max-width: 991px){
+	    	@include size(164px, 362px);
+	    }
+
+	    @media (max-width: 767px){
+	    	@include transform(skew(0deg));
+	    	@include size(100%, 362px);
+	    }
+
+		figure{
+			position: absolute;
+		    top: 0;
+		    //@include size(380px, 460px);
+			@include size(300px, 362px);
+		    left: -30px;
+		    @include transform(skew(10deg));
+		    background-size: cover;
+		    background-position: top center;
+
+		    @media (max-width: 767px){
+	    		@include transform(skew(0deg));
+		    	@include size(100%, 362px);
+		    	left: 0;
+		    }
+		}
+
+		@include component(hover-sec) {
+			position: absolute;
+			@include size(100%, 100%);
+
+			&:before{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				@include size(100%, 100%);
+				background-color: rgba($theme-primary, 0.7);
+				z-index: 0;
+			}
+
+			@include component(content) {
+				position: absolute;
+				left: 0;
+				bottom: 40px;
+				@include transform(skew(10deg));
+				text-align: center;
+
+				@media (max-width: 767px){
+		    		@include transform(skew(0deg));
+		    		right: 0;
+		    		margin: 0 auto;
+			    }
+
+				@include component(title) {
+					color: $theme-white;
+					font-size: $font-size-h5;
+					font-weight: $font-weight-semi-bold;
+					line-height: 1.2;
+					text-shadow: 1px 1px 2px $theme-black;
+					margin-bottom: 20px;
+					font-style: italic;
+
+					@media (max-width: 991px){
+						font-size: $font-size-medium;
+					}
+
+					@media (max-width: 767px){
+						font-size: $font-size-h3;
+					}
+				}
+
+				@include component(price) {
+					color: $theme-white;
+					font-size: 24px;
+					font-weight: $font-weight-semi-bold;
+					line-height: 1.2;
+					text-shadow: 1px 1px 2px $theme-black;
+					margin-bottom: 10px;
+					font-style: italic;
+				}
+			}
+		}
+	}
+}

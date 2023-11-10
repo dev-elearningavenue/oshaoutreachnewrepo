@@ -1,0 +1,794 @@
+header {
+    padding: 15px 0;
+    background: #fff;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    background: #F4F4F4;
+    min-height: 100vh;
+}
+
+header .logoWrapper img {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+header .col-6.col-sm-4:first-child .logoWrapper img {
+    width: 90%;
+}
+
+section.signupSection {
+    padding: 20px 0;
+}
+
+section.signupSection .signupWrapper {
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    padding: 50px 0;
+}
+
+section.signupSection .signupWrapper .formHeader h1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #00579E;
+    margin: 0;
+}
+
+section.signupSection .signupWrapper .formHeader p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    max-width: 300px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+section.signupSection .signupWrapper .formWrapper {
+    padding-top: 25px;
+}
+
+section.signupSection .signupWrapper .formWrapper h4.formTitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    color: #2B2F32;
+    margin-bottom: 15px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper {
+    /* margin-bottom: 50px; */
+    display: block;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group {
+    position: relative;
+    background: #FFFFFF;
+    z-index: 1;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    z-index: 9;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper label.fieldName {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #121826;
+    top: -8px;
+    left: 12px;
+    z-index: 99;
+    background: #fff;
+    padding: 0 5px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper label span.text-red {
+    color: red;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group .select2-container,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input {
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid #D2D5DA;
+    border-radius: 8px;
+    outline: none;
+    cursor: text;
+    background: rgba(0, 0, 0, 0);
+    padding-right: 45px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input.select2-search__field {
+    padding: 0 !important;
+    width: 100% !important;
+    border: none !important;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group .select2-container {
+    width: 100% !important;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    padding-right: 45px;
+    min-width: 100%;
+    z-index: 9;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group .select2-container * {
+    border: none !important;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group .select2-container span.select2-selection.select2-selection--multiple {
+    float: left;
+    width: 100% !important;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group .select2-container span.selection {
+    display: block;
+    width: 100% !important;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select.error,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input.error {
+    border-color: red;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input[type=number]::-webkit-outer-spin-button,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input[type=number] {
+    -moz-appearance: textfield;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select:placeholder,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input:placeholder {
+    color: #6C727F;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select:focus:placeholder,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input:focus:placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select::-webkit-input-placeholder,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input::-webkit-input-placeholder {
+    color: #6C727F;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select:focus::-webkit-input-placeholder,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input:focus::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select:-ms-input-placeholder,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input:-ms-input-placeholder {
+    color: #6C727F;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select:focus:-ms-input-placeholder,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input:focus:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group .iti.iti--allow-dropdown {
+    width: 100%;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input[type="tel"] {
+    padding-left: 65px;
+}
+
+.ppb {
+    color: #6C727F;
+}
+
+.ppb option {
+    color: #000000;
+}
+
+.iti--allow-dropdown .iti__flag-container .iti__selected-flag {
+    padding-left: 15px;
+    background: transparent !important;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group i.fal,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group svg {
+    position: absolute;
+    right: 17px;
+    top: 12px;
+    display: flex;
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+    color: #6C727F;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group select:focus~i.fa-chevron-down,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group span.select2-container--open~i.fa-chevron-down,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group span:focus~i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields {
+    position: relative;
+    display: block;
+    margin: 0 0 25px 0;
+    padding: 0 15px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields label {
+    position: relative;
+    left: inherit;
+    top: inherit;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .radioButtonsField {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields.checkBox .form-check {
+    width: 100%;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check {
+    position: relative;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check .check {
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    height: 15px;
+    padding: 0;
+    width: 15px;
+    top: 6px;
+    left: 0;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    border: 2px solid #d2d5da;
+    width: 15px;
+    margin: auto;
+    transition: ease all 0.25s;
+    -webkit-transition: ease all 0.25s;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check input[type=radio]:hover~.check:before,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check input[type=radio]:checked~.check:before {
+    background: #00579E;
+    border-color: #00579E;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check input[type=radio]:checked~.check:after {
+    background: #ddd;
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    margin: auto;
+    border-radius: 100%;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 9;
+    cursor: pointer;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check label {
+    position: relative;
+    left: inherit;
+    cursor: pointer;
+    top: inherit;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+section.signupSection .signupWrapper .formWrapper .formSteps h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #ddd;
+}
+
+section.signupSection .signupWrapper .formWrapper .formSteps h2 span {
+    color: #00579E;
+}
+
+section.signupSection .signupWrapper .formWrapper .progress {
+    margin-bottom: 35px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+section.signupSection .signupWrapper .formWrapper .progress .progress-bar-animated {
+    background: #00579E;
+    border-radius: 10px;
+}
+
+section.signupSection .signupWrapper .formWrapper .formSubmit button {
+    background: #00579E;
+    border-radius: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: block;
+    border: 1px solid #00579E;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+    transition: ease all 0.25s;
+}
+
+section.signupSection .signupWrapper .formWrapper .ctaWrapper {
+    margin-top: 15px;
+}
+
+section.signupSection .signupWrapper .formWrapper .formSubmit button:hover,
+section.signupSection .signupWrapper .formWrapper .formSubmit.backButton button {
+    color: #00579E;
+    background: rgba(0, 0, 0, 0);
+}
+
+section.signupSection .signupWrapper .formWrapper .formSubmit.backButton button:hover {
+    color: #fff;
+    background: #00579E;
+}
+
+section.signupSection .signupWrapper .formWrapper fieldset:not(:first-of-type) {
+    display: none
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields {
+    padding: 0 15px;
+    margin-bottom: 25px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields .checkboxButtonsField {
+    padding-left: 5px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields label {
+    position: relative;
+    left: inherit;
+    top: inherit;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields .checkboxButtonsField input {
+    cursor: pointer;
+    accent-color: #00579E;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields .checkboxButtonsField label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    text-align: center;
+    color: #6C757D;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .radioButtonsField label.error,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields .checkboxButtonsField label.error {
+    display: none !important;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group label.error {
+    font-size: 12px;
+    margin-left: 15px;
+    color: red;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .form-group .iti.iti--allow-dropdown .iti__flag-container {
+    max-height: 45px;
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields .checkboxButtonsField input:checked~label {
+    color: #00579E;
+
+}
+
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields label.error,
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields label.error {
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* section.signupSection .signupWrapper .formWrapper .fieldsWrapper .checkBoxFields label.error:not(:nth-child(3)),
+section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields label.error:not(:nth-child(3)) {
+    display: none !important;
+} */
+
+section.signupSection .signupWrapper .thankYouWrapper .iconWrapper {
+    text-align: center;
+}
+
+section.signupSection .signupWrapper .thankYouWrapper .desc h3 {
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+}
+
+section.signupSection .signupWrapper .thankYouWrapper .desc p {
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000;
+}
+
+section.signupSection .signupWrapper .formWrapper .beErrorWrapper .desc h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    color: #2B2F32;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section.signupSection .signupWrapper .formWrapper .beErrorWrapper .desc p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    max-width: 50%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+}
+
+@media (min-width: 769px) {
+    .container {
+        max-width: 769px;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width:1536px) {
+    .col-11.col-md-9.col-lg-6.col-xl-5 {
+        flex: 0 0 51.666667%;
+        max-width: 51.666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    section.signupSection .signupWrapper .formHeader p {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    section.signupSection .signupWrapper .formHeader p {
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    section.signupSection .signupWrapper .formWrapper .ctaWrapper .col-12.col-md-6:last-child {
+        order: 1;
+        position: relative;
+    }
+
+    section.signupSection .signupWrapper .formWrapper .ctaWrapper .col-12.col-md-6:first-child {
+        order: 2;
+    }
+
+    section.signupSection .signupWrapper .formWrapper .ctaWrapper .col-12.col-md-6:last-child button {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .logoWrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:425px) {
+    section.signupSection .signupWrapper .formWrapper .fieldsWrapper .radioFields .form-check .check {
+        top: 1px;
+    }
+}
+
+input["name='dob'"] {
+    max-width: 120px;
+    padding: 5px 10px;
+    border: 1px solid #C8CCD4;
+    border-radius: 3px;
+    text-align: center;
+    appearance: none;
+    margin-top: 35%;
+}
+
+input["name='dob'"] :focus {
+    outline: none;
+    border-color: #5D9CF5;
+}
+
+.ui-datepicker {
+    width: 280px;
+    padding: 5px;
+    background: #2B323B;
+    border-radius: 4px;
+    box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+@media screen and (max-width: 580px) {
+    .ui-datepicker {
+        top: auto !important;
+        right: 15px !important;
+        bottom: 0 !important;
+        left: 15px !important;
+        border-radius: 0px;
+    }
+}
+
+.ui-datepicker.active {
+    opacity: 1;
+}
+
+.ui-datepicker-header {
+    height: 40px;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.ui-datepicker-header .ui-datepicker-title {
+    text-align: center;
+    line-height: 34px;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year {
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin: 0 1px;
+    width: 55px;
+    text-align: center;
+}
+
+.ui-datepicker-month option,
+.ui-datepicker-year option {
+    color: black;
+    text-align: left;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    text-indent: 9999px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+    background: #444B56;
+}
+
+.ui-datepicker-prev {
+    float: left;
+}
+
+.ui-datepicker-prev:after {
+    transform: rotate(45deg);
+    margin-left: 15px;
+}
+
+.ui-datepicker-next {
+    float: right;
+}
+
+.ui-datepicker-next:after {
+    transform: rotate(-135deg);
+    margin-left: 13px;
+}
+
+.ui-datepicker-prev:after,
+.ui-datepicker-next:after {
+    content: "";
+    position: absolute;
+    display: block;
+    margin-top: -10px;
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid #C2C7D1;
+    border-bottom: 2px solid #C2C7D1;
+    pointer-events: none;
+}
+
+.ui-datepicker-calendar {
+    width: 100%;
+    text-align: center;
+}
+
+.ui-datepicker-calendar thead tr th {
+    width: 40px;
+    padding-bottom: 6px;
+}
+
+.ui-datepicker-calendar thead tr th span {
+    display: block;
+    width: 100%;
+    padding: 0;
+    color: #8D9298;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ui-datepicker-calendar tbody tr td {
+    padding-right: 3px;
+    padding-bottom: 3px;
+}
+
+.ui-datepicker-calendar tbody tr td:first-child {
+    padding-left: 3px;
+}
+
+.ui-state-default {
+    display: block;
+    text-decoration: none;
+    color: white;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.ui-state-default:hover {
+    background: #444B54;
+    text-decoration: none;
+    color: white;
+}
+
+.ui-state-highlight {
+    color: #FED615;
+}
+
+.ui-state-active:not(.ui-state-highlight) {
+    color: white;
+    background: #5D9CF5;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+    color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}

@@ -1,0 +1,119 @@
+@include component(box) {	
+	
+	@include option(courses-box) {
+		text-align: center;
+		margin-top: 60px;
+		
+		@include component(title) {
+			font-size: $font-size-h6;
+			font-weight: $font-weight-semi-bold;
+			line-height: 1.4;
+			color: $theme-primary;
+
+			span{
+				display: block;
+			}
+		}
+
+		@include component(desc) {
+			font-size: $font-size-medium;
+			margin: 20px 0 14px;
+			line-height: 1.8;
+		}
+
+		@include component(link-btn) {
+			color: $theme-primary;
+			display: block;
+			@extend .ff-secondary;
+		}
+	}
+
+	@include option(mission-box) {
+		padding: 0 20%;
+
+		@media (max-width: 767px){
+			padding: 0;
+			margin-bottom: 40px;
+		}
+
+		@include component(title) {
+			margin-bottom: 0;
+		}
+
+		@include component(subtitle) {
+			
+		}
+		
+		@include component(desc) {
+			font-size: $font-size-large;
+			margin-top: 20px;
+		}
+	}
+
+	@include option(benefit-box) {
+		padding: 0 20%;
+
+		@media (max-width: 767px){
+			padding: 0;
+		}
+
+		@include component(desc) {
+			font-size: $font-size-large;
+		}
+	}
+
+	@include option(outline-box) {
+		li{
+			margin-bottom: 10px;
+			font-size: $font-size-medium;
+		}
+	}
+
+	@include option(course-objectives) {
+		
+		li{
+			position: relative;
+			padding-left: 20px;
+			font-size: $font-size-large;
+			margin-bottom: 20px;
+
+			&:before{
+				content: '\2022';
+				color: $theme-primary;
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-size: $font-size-h4;
+				line-height: 20px;
+			}
+		}
+
+		@include component(desc) {
+			font-size: $font-size-large;
+			text-align: center;
+			line-height: 1.8;
+			margin-bottom: 30px;
+		}
+	}
+
+	@include option(contact-box) {
+		margin-top: 30px;
+		background-color: #f6f6f6;
+		border-radius: 10px;
+		padding: 40px 20px;
+		text-align: center;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		@include component(title) {
+			color: $theme-primary;
+			font-weight: $font-weight-normal;
+			margin-bottom: 50px;
+		}
+
+		@include component(desc) {
+			font-size: $font-size-large;
+			line-height: 1.8;
+		}
+	}
+}

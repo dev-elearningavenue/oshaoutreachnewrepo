@@ -1,0 +1,137 @@
+@include component(mobile-nav-btn) {
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    z-index: 1000;
+    color: #292a2d;
+    @include transform(rotate(0deg));
+    @include transition(.5s ease-in-out);
+    cursor: pointer;
+    margin-top: 18px;
+    float: right;
+    position: relative;
+    right: 8%;
+
+    @media (max-width: 380px){
+        margin-top: 4px;
+    }
+
+    @include component(lines) {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #2f2e32;
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        @include transform(rotate(0deg));
+        @include transition(.25s ease-in-out);
+
+        &:nth-child(1){
+            top: 1px;
+            width: 80%;
+        }
+
+        &:nth-child(2), &:nth-child(3){
+            top: 11px;
+        }
+
+        &:nth-child(4){
+            top: 21px;
+            width: 60%;
+        }
+    }
+
+    &:hover{
+        @include component(lines) {
+            &:nth-child(1){
+                width: 50%;
+            }
+            &:nth-child(4){
+                width: 80%;
+            }
+        }
+    }
+
+    &.nav-active{
+        position: fixed;
+        @include component(lines) {
+            background: $theme-white;
+            &:nth-child(1), &:nth-child(4){
+                top: 10px;
+                width: 0%;
+                left: 50%;
+            }
+            &:nth-child(2){
+                @include transform(rotate(45deg));
+            }
+            &:nth-child(3){
+                @include transform(rotate(-45deg));
+            }
+        }
+    }
+
+    .sticky &{
+        margin-top: 12px;
+    }
+
+    &.mobile-btn{
+        @include component(lines) {
+            background: $theme-white;
+        }
+    }
+}
+
+
+@include component(mobile-nav) {
+    position: fixed;
+    @include size(0%, 100%);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: $theme-primary;
+    @include transition(0.6s);
+
+    @include component(mobile-navigation) {
+        position: absolute;
+        @include transform(translate(-50%, -50%));
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        display: none;
+
+        a{
+            color: $theme-white;
+            font-size: $font-size-large;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+            display: block;
+            position: relative;
+
+            &:after{
+                content:'';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                @include size(0%, 2px);
+                background: $theme-white;
+                @include transition(0.4s);
+            }
+
+            &:hover{
+                &:after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.nav-active{
+        width: 100%;
+
+        @include component(mobile-navigation) {
+            display: block;
+        }
+    }
+}

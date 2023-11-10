@@ -1,0 +1,202 @@
+@include component(page-heading) {
+	
+	@include component(title) {
+		font-size: 38px;
+		font-weight: $font-weight-semi-bold;
+		text-align: center;
+		margin-bottom: 30px;
+		line-height: 1;
+
+		@media (max-width: 767px){
+			font-weight: $font-weight-bold;
+			font-size: $font-size-h5;
+		}
+	}
+
+	@include component(subtitle) {
+		font-size: $font-size-large;
+		text-align: center;
+		position: relative;
+		padding-bottom: 30px;
+
+		&:after{
+			content: '';
+			@include size(60px, 2px);
+			background-color: $theme-primary;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+	}
+}
+
+@include component(home-intro) {
+	text-align: center;
+
+	@include component(title) {
+		font-size: 28px;
+		font-weight: $font-weight-semi-bold;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+		@extend .ff-primary;
+
+		@media (max-width: 767px){
+			font-size: $font-size-h5;
+			font-weight: $font-weight-bold;
+			margin-bottom: 20px;
+		}
+	}
+
+	@include component(subtitle) {
+		font-size: $font-size-h4;
+		line-height: 1.4;
+		margin-bottom: 40px;
+
+		@media (max-width: 767px){
+			font-size: $font-size-large;
+		}
+	}
+
+	@include component(price-time) {
+		font-size: $font-size-medium;
+		margin: 0 20px;
+		@media (max-width: 767px){
+			margin: 0 5px;
+		}
+		font-weight: $font-weight-bold;
+
+		strong{
+			font-size: $font-size-large;
+			color: #fd0000;
+		}
+
+		@include component(xicon) {
+			color: $theme-primary;
+		}
+	}
+}
+
+
+@include component(price-table) {
+	//width: 70%;
+	margin: 60px auto 0;
+	border-spacing: 0;
+
+	th{
+		height: 100px;
+		vertical-align: middle;
+		font-size: $font-size-h6;
+		line-height: 1.2;
+
+		&:nth-child(1){
+			background-color: #d1d1d1;
+		}
+
+		&:nth-child(2){
+			background-color: #e7c400;
+		}
+
+		&:nth-child(3){
+			background-color: #e77800;
+		}
+	}
+
+	td{
+		border: 1px solid #d6d7d6;
+		border-top: 0;
+		height: 120px;
+		text-align: center;
+
+		@include component(price) {
+			font-size: 30px;
+			color: #171717;
+
+			&.big{
+				font-size: 42px;
+				font-weight: $font-weight-bold;
+				color: #ff0000;
+			}
+		}
+	}
+}
+
+@include component(course-outline) {
+	width: 80%;
+	margin: 0 auto;
+}
+
+@include component(fixed-cta) {
+	background-color: $theme-secondary;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 0;
+	z-index: 99;
+
+	@include component(course-name) {
+		margin-top: 2px;
+
+		@media (max-width: 767px){
+			font-size: $font-size-large;
+		}
+	}
+
+	@include component(price-time) {
+		margin: 6px 10px 10px;
+		font-weight: $font-weight-bold;
+		display: inline-block;
+
+		&:first-child{
+			margin-left: 0;
+		}
+
+		strong{
+			font-size: $font-size-medium;
+			color: #fd0000;
+		}
+
+		@include component(xicon) {
+			color: $theme-primary;
+		}
+	}
+
+	.btn.\--btn-small{
+		font-size: $base-font-size;
+	}
+}
+
+@include component(group-enrollment-intro) {
+	
+	@include component(title) {
+		font-size: $font-size-h2;
+
+		@media (max-width: 767px){
+			font-size: $font-size-h4;
+		}
+	}
+
+	@include component(subtitle) {
+		font-size: $font-size-h3;
+		color: $theme-primary;
+		margin: 10px 0 0;
+
+		@media (max-width: 767px){
+			font-size: $font-size-h6;
+		}
+	}
+}
+
+@include component(setmap) {
+	margin-top: 60px;
+	iframe{
+		@include size(100%, 600px);
+		display: block;
+	}
+}
+
+// .shopping-cart.cart-form {
+// 	overflow-x:auto;
+// }

@@ -1,0 +1,25 @@
+@import url('./style.css');
+
+.thumbnail img {
+    max-height: 150px;
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price {
+    font-weight:bold;
+    font-size: 16px;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.shopping-cart .price-field,
+.shopping-cart .qty-field{
+	text-align: center;
+	width: 60px;
+	display: inline-block;
+}

@@ -1,0 +1,78 @@
+@include component(primary-footer) {
+	background-repeat: no-repeat;
+	background-position: 60px 50px;
+	background-color: #242526;
+	padding: 100px 0;
+
+	@media (max-width: 767px){
+		padding: 30px 0;
+		text-align: center;
+	}
+
+	@include component(footer-logo) {
+		display: block;
+
+		@media (max-width: 767px){
+			img{
+				margin: 0 auto;
+			}
+		}
+	}
+
+	@include component(about-desc) {
+		font-size: $font-size-medium;
+		color: $theme-sp-grey;
+		margin: 50px 0;
+
+		@media (max-width: 767px){
+			margin: 0px !important;
+			text-align: center;
+		}
+	}
+
+	@include component(social-links) {
+
+		@media (max-width: 767px){
+			margin: 20px 0;
+		}
+		
+		@include component(title) {
+			color: $theme-white;
+			font-size: $font-size-medium;
+			margin-bottom: 10px;
+		}
+
+		li{
+			margin-right: 14px;
+		}
+
+		@include component(xicon) {
+			color: $theme-white;
+		}
+	}
+
+	@include component(f-title) {
+		font-size: $font-size-medium;
+		color: $theme-white;
+		font-weight: $font-weight-semi-bold;
+		text-transform: uppercase;
+		margin: 16px 0 40px;
+	}
+
+	@include component(f-nav) {
+		
+		a{
+			font-size: $font-size-medium;
+			color: $theme-sp-grey;
+			margin-bottom: 14px;
+			display: inline-block;
+		}
+	}
+}
+
+@include component(copyright) {
+	background-color: #1f2224;
+	color: #969696;
+	text-align: center;
+	padding: 20px 0;
+}

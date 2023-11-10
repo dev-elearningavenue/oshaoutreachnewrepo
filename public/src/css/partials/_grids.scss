@@ -1,0 +1,96 @@
+$gutter : 30px;
+
+@include component(grid-block) {
+	overflow: hidden;
+	@include unstyled;
+
+	> * {
+		float: left;
+		@include box-sizing;
+	}
+
+	@include option(type-inline-blocks) {
+		> * {
+			float: none;
+			display: inline-block;
+			vertical-align: top;
+			margin-left: -5px;
+		}
+	}
+
+	@include option(type-two-blocks) {
+		> * {
+			width: 50% !important;
+		}
+	}
+
+	@include option(type-three-blocks) {
+		> * {
+			width: 33.333% !important;
+		}
+	}
+
+	@include option(type-four-blocks) {
+		> * {
+			width: 25% !important;
+		}
+	}
+
+	@include option(type-five-blocks) {
+		> * {
+			width: 20% !important;
+		}
+	}
+
+	@include option(type-six-blocks) {
+		> * {
+			width: 16.6667% !important;
+		}
+	}
+
+	@include option(style-offsets) {
+		margin-left: -$gutter;
+		> * {
+			padding-left: $gutter;
+		}
+
+		@include option(offset-small) {
+			margin-left: -20px;
+			> * {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	@include option(style-bottom-offsets) {
+		> * {
+			margin-bottom: 50px;
+		}
+
+		@include option(offset-bottom-small) {
+			> * {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	@media (max-width: 991px){
+		@include option(ipad-half-grid) {
+			> *{
+				width: 50% !important;
+			}
+		}
+	}
+
+	@media (max-width: 767px){
+		@include option(mobile-full-grid) {
+			> *{
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+ul.grid-block{
+	@include unstyled;
+}

@@ -1,0 +1,133 @@
+@include component(top-bar) {
+    background-color: $theme-secondary;
+    // padding: 20px 0;
+    padding: 2px 0;
+
+    @media (max-width: 991px) {
+        // padding: 10px;
+        padding: 0 5px;
+    }
+
+    @include component(contact-number) {
+        font-weight: $font-weight-light;
+        font-size: $font-size-medium;
+        line-height: 22px;
+        //padding: 20px 0;
+        display: inline-block;
+
+        &:first-child {
+            // border-right: 1px solid;
+            // padding-right: 5px;
+            // margin-right: 5px;
+        }
+
+        @media (max-width: 991px) {
+            padding: 5px 0;
+            font-size: $base-font-size;
+        }
+    }
+
+    @include component(top-nav) {
+        text-align: right;
+
+        li {
+            border-right: 1px solid;
+            padding: 0 10px;
+
+            // @media (max-width: 991px) {
+            //     padding: 0 5px;
+            // }
+
+            a {
+                display: block;
+                font-size: $font-size-medium;
+                font-weight: $font-weight-light;
+
+                @media (max-width: 991px) {
+                    font-size: $base-font-size;
+                }
+            }
+
+            &:nth-child(2) {
+                @media (max-width: 479px) {
+                    float: left;
+                    border-right: none;
+                }
+            }
+
+            //&:first-child{
+            //	a{
+            //		padding: 20px 35px;
+            //
+            //		@media (max-width: 991px){
+            //			padding: 10px;
+            //		}
+            //	}
+            //}
+            //
+            //&:nth-child(2){
+            //	a{
+            //		padding: 20px 50px;
+            //		background-color: $theme-primary;
+            //		color: $theme-white;
+            //
+            //		@media (max-width: 991px){
+            //			padding: 10px;
+            //		}
+            //	}
+            //}
+            //
+            //	&:nth-child(3){
+            // &:first-child {
+            &:nth-child(4) {
+                padding: 0;
+                border-right: none;
+
+                @media (max-width: 479px) {
+                    float: right;
+                }
+
+                @include component(shopping-cart) {
+                    // padding: 0px 26px;
+                    padding: 0px 26px 0 8px;
+                    position: relative;
+
+                    @media (max-width: 991px) {
+                        padding: 6px 10px;
+                    }
+
+                    @include component(icon-cart) {
+                        font-size: $font-size-h4;
+                        vertical-align: middle;
+
+                        @media (max-width: 991px) {
+                            font-size: $font-size-large;
+                        }
+
+                        @include component(badge) {
+                            position: absolute;
+                            top: 7px; //-10px;
+                            right: 12px;
+                            font-size: $font-size-small;
+                            color: $theme-white;
+                            background: $theme-black;
+                            border-radius: 50%;
+                            @include size(18px, 18px);
+                            text-align: center;
+                            padding: 2px 0 0;
+
+                            @media (max-width: 991px) {
+                                top: 0px;
+                                right: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include component(primary-header) {
+    padding: 40px 0;
+}

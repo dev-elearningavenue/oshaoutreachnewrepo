@@ -1,0 +1,73 @@
+@include component(navigation) {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-semi-bold;
+    @extend .ff-secondary;
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 20px;
+
+    @media (max-width: 991px) {
+        font-size: $font-size-small;
+        margin-top: 8px;
+    }
+
+    li {
+        margin: 0 3%;
+        position: relative;
+        padding-bottom: 20px;
+
+        @media (max-width: 1200px) {
+            margin: 0 2%;
+        }
+
+        @media (max-width: 991px) {
+            margin: 0 1%;
+        }
+
+        a {
+            &:hover {
+                color: $theme-primary;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include component(dropdown) {
+            position: absolute;
+            left: -20px;
+            top: 40px;
+            padding: 20px 15px 10px;
+            border-radius: 10px;
+            width: 324px;
+            text-align: left;
+            z-index: 9;
+            background: $theme-white;
+            @include box-shadow(0px 0px 0px 2px $theme-secondary);
+            display: none;
+
+            li {
+                margin: 0;
+                padding: 0;
+
+                a {
+                    margin-bottom: 16px;
+                    text-transform: uppercase;
+                    display: block;
+                    line-height: 1;
+
+                    &:hover {
+                        color: $theme-primary;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            @include component(dropdown) {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@include component(btn) {
+	padding: 14px 40px;
+	display: inline-block;
+	@include transition(0.4s);
+	font-size: $font-size-large;
+	text-transform: uppercase;
+	font-weight: $font-weight-semi-bold;
+
+	@media (max-width: 767px){
+		padding: 10px 20px;
+		font-size: $font-size-medium;
+	}
+	
+
+	@include option(btn-primary) {
+		background: $theme-primary;
+		color: white;
+	}
+
+	@include option(btn-secondary) {
+		background: $theme-secondary;
+		color: white;
+	}
+
+	@include option(btn-white) {
+		background: $theme-white;
+		color: $theme-primary;
+	}
+	@include option(btn-small) {
+		padding: 8px 20px;
+		font-size: $font-size-medium;
+	}
+
+	&:hover{
+		@include opacity(0.8);
+	}
+}

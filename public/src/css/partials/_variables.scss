@@ -1,0 +1,125 @@
+// @font-face {
+// 	font-family: 'Trump Gothic East';
+// 	src:url('fonts/TrumpGothicEast_bold.ttf') format("truetype"),
+// 		url('fonts/TrumpGothicEast_bold.woff2') format("woff2"),
+// 		url('fonts/TrumpGothicEast_bold.woff') format("woff");
+// 		font-weight:700;
+// 		font-style:normal;
+// }
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$base-font-family		:   'Source Sans Pro', sans-serif !default;
+$heading-font-family	:   'Poppins', sans-serif !default;
+$base-line-height		: 	1.5;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+
+$base-font-size			: 	14px !default;
+$font-size-h1			: 	70px;
+$font-size-h2			: 	38px;
+$font-size-h3			: 	26px;
+$font-size-h4			: 	24px;
+$font-size-h5			: 	22px;
+$font-size-h6			: 	20px;
+
+$font-size-xsmall		: 	10px;
+$font-size-small		: 	12px;
+$font-size-medium		: 	16px;
+$font-size-large		: 	18px;
+
+$font-weight-black		: 	900;
+$font-weight-bold		: 	700;
+$font-weight-semi-bold	: 	600;
+$font-weight-medium		: 	500;
+$font-weight-normal		: 	400;
+$font-weight-light		: 	300;
+$font-weight-thin		: 	100;
+
+
+//== Color Variation
+//
+//## Text color, Background color, Border color.
+
+$theme-default	: 	#1f1d1e;
+$theme-white	: 	#ffffff;
+$theme-black	: 	#000000;
+$theme-red      :   #ff0000;
+$theme-grey		: 	#666666;
+$theme-lg-grey	: 	#f2f2f2;
+$theme-sp-grey	: 	#a7a8a8;
+$theme-dk-grey	: 	#333333;
+$body-bg: $theme-default;
+// Theme Colors
+$theme-primary 	: 	#1784c4;
+$theme-secondary: 	#e9e9e9;
+
+$link-color		: 	#1f1d1e;
+
+
+//== Sprite Path
+//
+
+$sprite-image			: 	"sprite.png";
+$media-basepath			: 	"../images";
+$full-path				: 	"#{$media-basepath}/#{$sprite-image}";
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * .25),
+    y: ($spacer-y * .25)
+  ),
+  2: (
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  ),
+  3: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  4: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  )
+) !default;
+$border-width: 1px !default;
+
+$table-cell-padding:            .75rem !default;
+$table-sm-cell-padding:         .3rem !default;
+
+$table-bg:                      transparent !default;
+
+$table-inverse-bg:              $theme-dk-grey !default;
+$table-inverse-color:           $theme-primary !default;
+
+$table-bg-accent:               rgba($theme-black,.05) !default;
+$table-bg-hover:                rgba($theme-black,.075) !default;
+$table-bg-active:               $table-bg-hover !default;
+
+$table-head-bg:                 $theme-lg-grey !default;
+$table-head-color:              $theme-sp-grey !default;
+
+$table-border-width:            $border-width !default;
+$table-border-color:            $theme-lg-grey !default;
+
+// Icon Fonts Path
+$icomoon-font-path: "fonts" !default;

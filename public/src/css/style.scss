@@ -1,0 +1,57 @@
+/*
+	Theme Name: Osha Outreach Courses
+	Theme URI: http://Osha.com
+	Description: Osha Outreach Courses
+	Version: 1.4.3
+	Author: <a href="contact@muhammedahsan.com">Muhammed Ahsan</a> (@eahxen)
+	Author URI: http://muhammedahsan.com
+	Tags: HTML5, SASS
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+@import 'partials/style';
+@import "partials/bootstrap";
+@import "partials/mixins";
+@import "partials/offsets";
+@import "partials/variables";
+@import "partials/global";
+@import "partials/grids";
+@import "partials/xicon";
+@import "partials/btn";
+@import "partials/form";
+@import "partials/tables";
+
+// Slick Slider
+@import "partials/slickslider";
+
+// Fancybox
+@import "partials/fancybox";
+
+// Custom Slider
+@import "partials/slider";
+
+// Listing Style
+@import "partials/list-style";
+
+// Header
+@import "partials/header";
+
+// Navigation
+@import "partials/navigation";
+
+// Box
+@import "partials/box";
+
+// Banners
+@import "partials/banner";
+
+// Primary Footer
+@import "partials/footer";
+
+// Extra Sections
+@import "partials/extra-sections";
+
+// Mobile Navigation
+@import "partials/mobile-navigation";

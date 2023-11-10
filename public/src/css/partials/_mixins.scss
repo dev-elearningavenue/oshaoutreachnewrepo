@@ -1,0 +1,515 @@
+@mixin box-sizing{
+	-webkit-box-sizing: border-box;      // Safari/Chrome, other WebKit 
+    -moz-box-sizing: border-box;         // Firefox, other Gecko 
+    box-sizing: border-box;  			 // Opera/IE 8+
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin unstyled{
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+// --------------------------------------------------------------------
+// Responsive Image 
+// --------------------------------------------------------------------
+@mixin img-responsive($display: block){
+	display: $display;
+	max-width: 100%; // Part 1: Set a maximum relative to the parent
+	height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+
+// --------------------------------------------------------------------
+// Opacity 
+// --------------------------------------------------------------------
+// @include opacity(0.8);
+//
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+
+// --------------------------------------------------------------------
+// DIV Center Align
+// --------------------------------------------------------------------
+@mixin m-auto() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// --------------------------------------------------------------------
+// Border Radius
+// --------------------------------------------------------------------
+
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+   border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
+}
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+
+// --------------------------------------------------------------------
+// Define Size 
+// --------------------------------------------------------------------
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+
+// --------------------------------------------------------------------
+// Hide Appearance
+// --------------------------------------------------------------------
+
+@mixin appearance($args){
+  -webkit-appearance: $args;
+    -moz-appearance: $args;
+    appearance: $args;
+}
+
+// --------------------------------------------------------------------
+// Sprite Image
+// --------------------------------------------------------------------
+// @include sprite(100px, 200px, 10px, 20px);
+// ~~~
+// will generate
+// ~~~
+// background-image: url("/_ui/media/dist/mcindoe-sprite.png");
+// background-position: -100px, -200px;
+// background-repeat: no-repeat;
+// width: 10px;
+// height: 20px;
+//
+
+@mixin sprite(
+  $x            : 0,
+  $y            : 0,
+  $width        : 100px,
+  $height       : 100px,
+  $sprite-image : $full-path
+){
+  background: {
+    image: url($sprite-image);
+    position: -1*$x -1*$y;
+    repeat: no-repeat;
+  }
+  width: $width; height: $height;
+}
+
+
+// --------------------------------------------------------------------
+// transition
+// --------------------------------------------------------------------
+//
+// `@include transition(args);`
+//
+// Adds the required vendor-pre-fixes.
+//
+// ~~~
+// @include transition(all .2s ease-in-out);
+// ~~~
+// Will generate:
+// ~~~
+// -webkit-transition : all .2s ease-in-out
+//    -moz-transition : all .2s ease-in-out
+//      -o-transition : all .2s ease-in-out
+//         transition : all .2s ease-in-out
+// ~~~
+//
+
+@mixin transition($args...){
+	-webkit-transition: $args;
+	-moz-transition	  : $args;
+	-o-transition     : $args;
+	transition        : $args;
+}
+
+// --------------------------------------------------------------------
+// transition-delay
+// --------------------------------------------------------------------
+//
+// `@include transition-delay(args);`
+//
+// Adds the required vendor-pre-fixes.
+//
+// ~~~
+// @include transition-delay(.2s);
+// ~~~
+// Will generate:
+// ~~~
+// -webkit-transition-delay : .2s
+//    -moz-transition-delay : .2s
+//      -o-transition-delay : .2s
+//         transition-delay : .2s
+// ~~~
+//
+
+
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+     -moz-transition-delay: $transition-delay;
+       -o-transition-delay: $transition-delay;
+          transition-delay: $transition-delay;
+}
+
+
+
+// --------------------------------------------------------------------
+// box-shadow
+// --------------------------------------------------------------------
+//
+// `@include box-shadow(args...);`
+//
+// Adds the required vendor-pre-fixes.
+//
+// ~~~
+// @include box-shadow(0 0 10px rgba(0,0,0,.5));
+// ~~~
+// Will generate:
+// ~~~
+// -webkit-box-shadow: 0 0 10px rgba(0,0,0,.5);
+//         box-shadow: 0 0 10px rgba(0,0,0,.5);
+// ~~~
+//
+
+@mixin box-shadow($args...){
+  -webkit-box-shadow: $args;
+  box-shadow: $args;
+}
+
+
+@mixin user-select($args){
+  -webkit-user-select: $args;  /* Chrome all / Safari all */
+  -moz-user-select: $args;     /* Firefox all */
+  -ms-user-select: $args;      /* IE 10+ */
+  user-select: $args; 
+}
+
+
+// --------------------------------------------------------------------
+// transform
+// --------------------------------------------------------------------
+//
+// `@include transform(args...);`
+//
+// Adds the required vendor-pre-fixes.
+//
+// ~~~
+// @include transform(scale(1.1));
+// ~~~
+// Will generate:
+// ~~~
+// -webkit-transform: scale(1.1);
+//    -moz-transform: scale(1.1);
+//      -o-transform: scale(1.1);
+//     -ms-transform: scale(1.1);
+//         transform: scale(1.1);
+// ~~~
+//
+
+@mixin transform($args...){
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-o-transform: $args;
+	-ms-transform: $args;
+	transform: $args;
+}
+
+// --------------------------------------------------------------------
+// animation
+// --------------------------------------------------------------------
+//
+// `@include animation(args...);`
+//
+// Adds the required vendor-pre-fixes.
+//
+// ~~~
+// @include animation(anim-name 50s linear infinite);
+// ~~~
+// Will generate:
+// ~~~
+// -webkit-animation: anim-name 50s linear infinite;
+//    -moz-animation: anim-name 50s linear infinite;
+//     -ms-animation: anim-name 50s linear infinite;
+//      -o-animation: anim-name 50s linear infinite;
+//         animation: anim-name 50s linear infinite;
+// ~~~
+//
+
+
+@mixin animation($args){
+	-webkit-animation: $args;
+	  -moz-animation: $args;
+	   -ms-animation: $args;
+	    -o-animation: $args;
+	       animation: $args;
+}
+
+
+// --------------------------------------------------------------------
+// keyframes
+// --------------------------------------------------------------------
+//
+// ~~~
+// @include keyframes(anim-name){
+// 		Content....		
+// }
+// ~~~
+//
+// Adds the required vendor-pre-fixes.
+// ~~~
+// @include keyframes(slide-left){
+// 		0%  {opacity: 0}
+// 		100%{opacity: 1}
+// }
+// ~~~
+// Will generate:
+// ~~~
+// @keyframes slide-left {
+// 		0%  {opacity: 0}
+// 		100%{opacity: 1}
+// }
+// @-webkit-keyframes slide-left {
+// 		0%  {opacity: 0}
+// 		100%{opacity: 1}
+// }
+// @-moz-keyframes slide-left {
+// 		0%  {opacity: 0}
+// 		100%{opacity: 1}
+// }
+// @-ms-keyframes slide-left {
+// 		0%  {opacity: 0}
+// 		100%{opacity: 1}
+// }
+// @-o-keyframes slide-left {
+// 		0%  {opacity: 0}
+// 		100%{opacity: 1}
+// }
+//~~~
+//
+
+
+@mixin keyframes($name){
+
+	@keyframes #{$name} {
+    	@content;	
+	}
+
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@-moz-keyframes #{$name} {
+    	@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@-o-keyframes #{$name} {
+		@content;
+	}
+
+}
+
+// --------------------------------------------------------------------
+// Gradients
+// --------------------------------------------------------------------
+//
+
+// --------------------------------------------------------------------
+// gradient-vertical
+// --------------------------------------------------------------------
+//
+// `@include gradient-vertical($startcolor, $endcolor)`
+//
+
+
+@mixin gradient-vertical($startcolor, $endcolor){
+    background-color: $endcolor;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from($startcolor), to($endcolor)); // Konqueror
+    background-image: -moz-linear-gradient(top, $startcolor, $endcolor); // FF 3.6+
+    background-image: -ms-linear-gradient(top, $startcolor, $endcolor); // IE10
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startcolor), color-stop(100%, $endcolor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, $startcolor, $endcolor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, $startcolor, $endcolor); // Opera 11.10
+    background-image: linear-gradient(top, $startcolor, $endcolor); // The standard
+    filter: #{("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",$startcolor,$endcolor)}; // IE9 and down
+}
+
+// --------------------------------------------------------------------
+// gradient-vertical-image
+// --------------------------------------------------------------------
+//
+// `@include gradient-vertical-image($img-path-properties, $startcolor, $endcolor)`
+//
+
+@mixin gradient-vertical-image($imgpath, $startcolor, $endcolor){
+	background: $endcolor $imgpath;
+    background: $imgpath, -khtml-gradient(linear, left top, left bottom, from($startcolor), to($endcolor)); // Konqueror
+    background: $imgpath, -moz-linear-gradient(top, $startcolor, $endcolor); // FF 3.6+
+    background: $imgpath, -ms-linear-gradient(top, $startcolor, $endcolor); // IE10
+    background: $imgpath, -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startcolor), color-stop(100%, $endcolor)); // Safari 4+, Chrome 2+
+    background: $imgpath, -webkit-linear-gradient(top, $startcolor, $endcolor); // Safari 5.1+, Chrome 10+
+    background: $imgpath, -o-linear-gradient(top, $startcolor, $endcolor); // Opera 11.10
+    background: $imgpath, linear-gradient(top, $startcolor, $endcolor); // The standard
+    filter: #{("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",$startcolor,$endcolor)}; // IE9 and down
+}
+
+// --------------------------------------------------------------------
+// gradient-horizontal
+// --------------------------------------------------------------------
+//
+// `@include gradient-horizontal($startcolor, $endcolor)`
+//
+
+@mixin gradient-horizontal($startcolor, $endcolor){	
+    
+  background: $startcolor; /* Old browsers */
+	background: -moz-linear-gradient(left, $startcolor 0%, $endcolor 100%); // FF3.6+ 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,$startcolor), color-stop(100%,$endcolor)); // Chrome,Safari4+
+	background: -webkit-linear-gradient(left, $startcolor 0%,$endcolor 100%); // Chrome10+,Safari5.1+
+	background: -o-linear-gradient(left, $startcolor 0%,$endcolor 100%); // Opera 11.10+ 
+	background: -ms-linear-gradient(left, $startcolor 0%,$endcolor 100%); // IE10+ 
+	background: linear-gradient(to right, $startcolor 0%,$endcolor 100%); // W3C 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}',GradientType=1 ); // IE6-9 
+}
+
+
+@mixin gradient-directional($startcolor, $endcolor, $deg) {
+  background: $startcolor; /* Old browsers */
+  background: -moz-linear-gradient($deg, $startcolor 0%, $endcolor 100%); // FF3.6+ 
+  background: -webkit-gradient($deg, color-stop(0%,$startcolor), color-stop(100%,$endcolor)); // Chrome,Safari4+
+  background: -webkit-linear-gradient($deg, $startcolor 0%,$endcolor 100%); // Chrome10+,Safari5.1+
+  background: -o-linear-gradient($deg, $startcolor 0%,$endcolor 100%); // Opera 11.10+ 
+  background: -ms-linear-gradient($deg, $startcolor 0%,$endcolor 100%); // IE10+ 
+  background: linear-gradient($deg, $startcolor 0%,$endcolor 100%); // W3C 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}',GradientType=1 ); // IE6-9 
+}
+
+
+
+// Grey Scale
+@mixin grayscale($value) {
+  -webkit-filter: #{"grayscale(#{$value})"};
+  -moz-filter: #{"grayscale(#{$value})"};
+  filter:#{"grayscale(#{$value})"};
+}
+
+
+
+// --------------------------------------------------------------------
+// Media-query-min
+// --------------------------------------------------------------------
+//
+// `@include media-query-min($point)`
+//
+// ~~~
+// $point: [n]px
+// ~~~
+//
+// Just pass the breakpoint directly to create a media-query block with min-width. eg.
+// ~~~
+// @include media-query-min(430px){... your styles ...}
+// ~~~
+// Will generate
+// ~~~
+// @media screen and (min-width: 430px) { 
+//    ... your styles ...
+// }
+// ~~~
+//
+
+@mixin media-query-min($point){
+	@media screen and (min-width: $point) { @content; }
+}
+
+// --------------------------------------------------------------------
+// Media-query-min-to-max
+// --------------------------------------------------------------------
+//
+// `@include media-query-min-to-max($startpoint, $endpoint)`
+//
+// ~~~
+// $startpoint, $endpoint: [n]px
+// ~~~
+//
+// For more control over breakpoints.
+// ~~~
+// @include media-query-min-to-max(430px, 560px){... your styles ...}
+// ~~~
+// will generate
+// ~~~
+// @media screen and (min-width: 430px) and (max-width: 560px) { 
+//    ... your styles ...
+// }
+// ~~~
+//
+
+@mixin media-query-min-to-max($startpoint, $endpoint){
+	@media screen and (min-width: $startpoint) and (max-width: $endpoint) { @content; }
+}
+
+
+// --------------------------------------------------------------------
+// Media-query-max
+// --------------------------------------------------------------------
+//
+// ~~~
+// @include media-query-max(430px){... your styles ...}
+// ~~~
+// will generate
+// ~~~
+// @media screen and (max-width: 430px){ 
+//    ... your styles ...
+// }
+// ~~~
+//
+
+@mixin media-query-max($point){
+	@media screen and (max-width: $point) { @content; }
+}
+
+// --------------------------------------------------------------------
+// Default Mixins
+// --------------------------------------------------------------------
+
+@mixin ta($align){
+	text-align: $align;
+}
+
+@mixin border($border){
+  border: $border;
+}
